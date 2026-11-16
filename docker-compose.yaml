@@ -5,11 +5,11 @@ services:
     restart: always
     environment:
       # === Required Settings
-      MAIN_URL: 'http://localhost:4007'
-      FRONTEND_URL: 'http://localhost:4007'
-      NEXT_PUBLIC_BACKEND_URL: 'http://localhost:4007/api'
-      JWT_SECRET: 'random string that is unique to every install - just type random characters here!'
-      DATABASE_URL: 'postgresql://postiz-user:postiz-password@postiz-postgres:5432/postiz-db-local'
+      MAIN_URL: 'https://postiz.welldevs.com.br'
+      FRONTEND_URL: 'https://postiz.welldevs.com.br'
+      NEXT_PUBLIC_BACKEND_URL: 'https://postiz.welldevs.com.br/api'
+      JWT_SECRET: '8bda49a8a93f71028247e943f1ced714d5dc0d911bc401f69ec90e516a523a48'
+      DATABASE_URL: 'postgresql://postiz-user:361f65d55d027b3276fd501a8d8a9b1f@postiz-postgres:5432/postiz-db-local'
       REDIS_URL: 'redis://postiz-redis:6379'
       BACKEND_INTERNAL_URL: 'http://localhost:3000'
       TEMPORAL_ADDRESS: "temporal:7233"
@@ -136,7 +136,7 @@ services:
     container_name: postiz-postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: postiz-password
+      POSTGRES_PASSWORD: 361f65d55d027b3276fd501a8d8a9b1f
       POSTGRES_USER: postiz-user
       POSTGRES_DB: postiz-db-local
     volumes:
